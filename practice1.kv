@@ -1,46 +1,18 @@
-#:import utils kivy.utils
-
-<MyGridLayout>:
-    name : name
-    roll : roll
-    reign : reign
-    output : output
-
-    GridLayout:
-        cols: 1
+<MyLayouts>:
+    BoxLayout:
+        orientation: 'vertical'
         size: root.width, root.height
+        spacing: 20
+        padding: 20
 
-        GridLayout:
-            cols: 2
-
-            Label:
-                text: 'Name'
-            TextInput:
-                id: name
-                multiline: False
-                background_color: utils.get_color_from_hex('#d3edeb')
-
-            Label:
-                text: 'Roll No'
-            TextInput:
-                id: roll
-                multiline: False
-                background_color: utils.get_color_from_hex('#d3edeb')
-
-            Label:
-                text: 'Register No'
-            TextInput:
-                id: reign
-                multiline: False
-                background_color: utils.get_color_from_hex('#d3edeb')
+        Button:
+            text: 'Check'
 
         Button:
             text: 'Submit'
-            font_size: 30
-            background_normal: ''
-            background_color: utils.get_color_from_hex('#17d1c2')
-            on_press: root.press()
-
-        Label:
-            id : output
-            text: ""
+            size_hint: (.1, .1)
+            #width: 100
+            #height: 100
+            pos_hint: {'center_x': .5}
+        Button:
+            text: 'OPEN'
