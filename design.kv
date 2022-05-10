@@ -1,0 +1,41 @@
+#:import utils kivy.utils
+
+<Button>:
+    size_hint: (1, .1)
+    background_normal: ''
+    background_color: utils.get_color_from_hex("#e02a1d")
+
+<MyLayouts>:
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        padding: 10
+        spacing: 10
+
+        Label:
+            text: 'Student Information Form'
+            font_size: 45
+            color: (0,1,0)
+            bold: True
+            italic: True
+            outline_color: (0,0,0)
+            outline_width: 2
+
+            # Label Color
+            background_color: (81/255, 160/255, 168/255, 1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        TextInput:
+            multiline: False
+            size_hint: (1, .1)
+
+        Button:
+            text: 'Check'
+
+        Button:
+            text: 'Submit'

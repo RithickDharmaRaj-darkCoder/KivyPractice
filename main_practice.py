@@ -5,7 +5,7 @@ from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.lang import Builder
 
-Builder.load_file('practice1.kv')
+Builder.load_file('design.kv')
 #Builder.load_string('''  {We can directly write our kv things here}   ''')
 
 class MyLayouts(Widget):
