@@ -11,12 +11,12 @@ Builder.load_file('practice1.kv')
 class MyLayouts(Widget):
    pass
 
-class Practice1App(App):
+class DemoApp(App):
     def build(self):
         return MyLayouts()
 
 
 
 if __name__ == '__main__':
-    Practice1App().run()
+    DemoApp().run()
 

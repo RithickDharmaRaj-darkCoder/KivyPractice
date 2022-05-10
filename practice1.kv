@@ -1,18 +1,27 @@
+#:import utils kivy.utils
+
+<Button>:
+    size_hint: (1, .1)
+    background_normal: ''
+    background_color: utils.get_color_from_hex("#e02a1d")
+
 <MyLayouts>:
     BoxLayout:
         orientation: 'vertical'
-        size: root.width, root.height
-        spacing: 20
-        padding: 20
+        size: root.height, root.width
+        padding: 10
+        spacing: 10
+
+        Label:
+            text: 'Student Information Form'
+            size_hint: (1, .1)
+
+        TextInput:
+            text: '--- Enter Your Name ---'
+            size_hint: (1, .1)
 
         Button:
             text: 'Check'
 
         Button:
             text: 'Submit'
-            size_hint: (.1, .1)
-            #width: 100
-            #height: 100
-            pos_hint: {'center_x': .5}
-        Button:
-            text: 'OPEN'
