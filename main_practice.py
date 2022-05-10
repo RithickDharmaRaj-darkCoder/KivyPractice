@@ -5,6 +5,7 @@ from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.lang import Builder
 from kivy.core.window import Window
+#from kivy.uix.image import Image (To get img from .py file)
 
 Builder.load_file('design.kv')
 #Builder.load_string('''  {We can directly write our kv things here}   ''')
@@ -14,7 +15,7 @@ class MyLayouts(Widget):
 
 class DemoApp(App):
     def build(self):
-        Window.clearcolor = (1,0,0,1)
+        Window.clearcolor = (0,0,0,1)
         return MyLayouts()
 
 
