@@ -1,11 +1,12 @@
 #:import utils kivy.utils
 
-<Button>:
-    size_hint: (1, .1)
-    background_normal: ''
-    background_color: utils.get_color_from_hex("#e02a1d")
-
 <MyLayouts>:
+    #canvas.before:
+        #Color:
+            #rgba: (0,1,0,1)
+        #Rectangle:
+            #pos: self.pos
+            #size: self.size
     BoxLayout:
         orientation: 'vertical'
         size: root.width, root.height
@@ -36,6 +37,13 @@
 
         Button:
             text: 'Check'
+            size_hint: (1, .1)
+            background_normal: ''
+            background_color: utils.get_color_from_hex("#096ced")
 
         Button:
             text: 'Submit'
+            size_hint: (1, .1)
+            background_normal: ''
+            background_color: utils.get_color_from_hex("#2ff58e")
+            color: (1,0,0,1)
