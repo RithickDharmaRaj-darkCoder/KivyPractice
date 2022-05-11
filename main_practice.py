@@ -11,7 +11,12 @@ Builder.load_file('design.kv')
 #Builder.load_string('''  {We can directly write our kv things here}   ''')
 
 class MyLayouts(Widget):
-   pass
+
+    def submit_btn(self):
+        #name = self.ids.name.text
+
+        self.ids.lbl_name.text = f'Hi {self.ids.name.text}, Good Greetings!'
+        self.name.text = ''
 
 class DemoApp(App):
     def build(self):
