@@ -12,7 +12,16 @@ Builder.load_file('design.kv')
 
 
 class MyLayouts(Widget):
-    pass
+
+    selected_lang = []
+    def checkbox_click(self, instance, click_status, lang):
+        if click_status == True:
+            MyLayouts.selected_lang.append(lang)
+            self.ids.output_label.text = f'{MyLayouts.selected_lang}'
+        else:
+            MyLayouts.selected_lang.remove(lang)
+            self.ids.output_label.text = f'{MyLayouts.selected_lang}'
+
 
 class DemoApp(App):
     def build(self):
